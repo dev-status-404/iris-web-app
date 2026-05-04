@@ -11,21 +11,33 @@ import { persistor } from "@/redux/store";
 import { useRouter } from "next/navigation";
 import { setAuthCookies } from "@/lib/cookies";
 import { GoogleLogin } from "@react-oauth/google";
+import { useSearchParams } from "next/navigation";
 
 const { Link, Text } = Typography;
+
+const DEFAULT_AUTH_REDIRECT = "/";
 
 const SignInForm: React.FC = () => {
   const logInMutation = useLogin();
   const googleSigninMutation = useGoogleSignin();
   const dispatch = useDispatch();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const inviteToken = searchParams.get("invite");
+
+  const withInvite = (redirect: string) => {
+    if (!inviteToken) return redirect;
+    const separator = redirect.includes("?") ? "&" : "?";
+    return `${redirect}${separator}invite=${encodeURIComponent(inviteToken)}`;
+  };
 
   const handleSubmit = (values: { email: string; password: string }) => {
     logInMutation.mutateAsync(values, {
       onSuccess: async (data) => {
-        const redirect = data.data.redirect;
+        
+        const redirect = withInvite(data.data.redirect || DEFAULT_AUTH_REDIRECT);
         const userData = data.data.user;
-        const token = data.data.token;
+        const token = data.data.accessToken;
 
         setAuthCookies({
           accessToken: token,
@@ -47,9 +59,9 @@ const SignInForm: React.FC = () => {
   const onGoogleSuccess = async (credentialResponse: any) => {
     await googleSigninMutation.mutateAsync(credentialResponse, {
       onSuccess: async (data) => {
-        const redirect = data.data.redirect;
+        const redirect = withInvite(data.redirect || DEFAULT_AUTH_REDIRECT);
         const userData = data.data.user;
-        const token = data.data.token;
+        const token = data.data.accessToken;
 
         setAuthCookies({
           accessToken: token,
@@ -67,6 +79,7 @@ const SignInForm: React.FC = () => {
       },
     });
   };
+
   const onGoogleError = async () => {
     console.log("Login Failed");
   };
@@ -122,7 +135,7 @@ const SignInForm: React.FC = () => {
       </Form.Item>
 
       <div className="auth-links">
-        <Link href="/auth/signup">
+        <Link href={inviteToken ? `/auth/signup?invite=${encodeURIComponent(inviteToken)}` : "/auth/signup"}>
           <FormattedMessage id="auth.sign_in.dont_have_account" />
         </Link>
         <Link href="/auth/forgot-password">

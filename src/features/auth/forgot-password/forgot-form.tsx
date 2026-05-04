@@ -10,9 +10,9 @@ const { Link } = Typography;
 const ForgotPassForm: React.FC = () => {
   const forgotPassMutation = useForgotPassword();
 
-  const handleSubmit = (values: { email: string }) => {
-    forgotPassMutation.mutateAsync(values);
-    forgotPassMutation.isSuccess && localStorage.setItem("email", values.email);
+  const handleSubmit = async (values: { email: string }) => {
+    await forgotPassMutation.mutateAsync(values);
+    localStorage.setItem("email", values.email);
   };
 
   return (

@@ -14,6 +14,18 @@ export const apiEndpoints = {
     verifyJWT: "/auth/verification",
   },
 
+  workspace: {
+    create: "/workspace",
+    current: "/workspace/current",
+    selectCurrent: "/workspace/current/select",
+    rename: (workspaceId: string) => `/workspace/${workspaceId}`,
+    invites: "/workspace/invites",
+    acceptInvite: "/workspace/invites/accept",
+    resendInvite: (inviteId: string) => `/workspace/invites/${inviteId}/resend`,
+    revokeInvite: (inviteId: string) => `/workspace/invites/${inviteId}/revoke`,
+    removeMember: (membershipId: string) => `/workspace/members/${membershipId}`,
+  },
+
   scrapper: {
     instagram: "/scrapper/scrap-instagram",
     linkedin: "/scrapper/scrap-linkedin",

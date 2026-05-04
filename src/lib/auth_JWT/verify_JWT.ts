@@ -4,9 +4,10 @@ import { apiEndpoints } from "./../../api/end-points";
 
 // Plain axios instance with no client-side interceptors — safe to use server-side.
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000";
+const API_PREFIX = process.env.NEXT_PUBLIC_API_PREFIX || "/api/v1";
 
 const serverApi = axios.create({
-  baseURL: `${BASE_URL}/api`,
+  baseURL: `${BASE_URL}${API_PREFIX}`,
 });
 
 /**

@@ -6,7 +6,7 @@ import { attachErrorInterceptor } from "./error-interceptor";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000";
   
 const api = axios.create({
-  baseURL: `${BASE_URL}/api`,
+  baseURL: `${BASE_URL}/api/v1`,
   paramsSerializer: (params) => qs.stringify(params, { encode: false }),
   withCredentials: true,
 });

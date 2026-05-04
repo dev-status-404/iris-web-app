@@ -17,6 +17,7 @@ import {
   UsersIcon,
   EnvelopeIcon,
   RectangleStackIcon,
+  PhoneArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
 import { useIntl } from "react-intl";
 import { usePathname, useRouter } from "next/navigation";
@@ -33,6 +34,7 @@ type MenuKey =
   | "folders"
   | "billing"
   | "settings"
+  | "phone_numbers"
   | "notifications"
   | "emails"
   | "email_templates"
@@ -64,6 +66,7 @@ const AppSider: React.FC = () => {
     folders: "/folders",
     notifications: "/notifications",
     billing: "/billings",
+    phone_numbers: "/phone-numbers",
     settings: "/settings",
     emails: "/emails",
     email_templates: "/email-templates",
@@ -100,6 +103,11 @@ const AppSider: React.FC = () => {
       key: "leads",
       icon: <UserGroupIcon className="h-5 w-5" />,
       label: intl.formatMessage({ id: "sidebar.leads" }),
+    },
+    {
+      key: "phone_numbers",
+      icon: <PhoneArrowUpRightIcon className="h-5 w-5" />,
+      label: intl.formatMessage({ id: "sidebar.phone_numbers" }),
     },
     {
       key: "folders",

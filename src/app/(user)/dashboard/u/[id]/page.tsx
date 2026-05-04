@@ -1,9 +1,7 @@
-import React from 'react'
+import WorkspacePanel from "@/features/workspace/panel";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+const Page = () => {
+  return <WorkspacePanel />;
+};
 
-export default page
+export default Page;

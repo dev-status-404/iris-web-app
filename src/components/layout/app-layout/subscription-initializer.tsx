@@ -34,7 +34,7 @@ const SubscriptionInitializer: React.FC = () => {
         subscription.status === "unpaid");
 
     if (noSubscription || lostAccess) {
-      router.replace("/plans");
+      // router.replace("/plans");
     }
   }, [subscription, isLoading, isError, pathname, router]);
 
