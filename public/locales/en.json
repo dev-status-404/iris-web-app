@@ -1,0 +1,198 @@
+{
+  "sidebar": {
+    "brand": "Iris",
+    "dashboard": "Dashboard",
+    "analysis": "Analysis",
+    "campaigns": "Campaigns",
+    "leads": "Leads",
+    "folders": "Folders",
+    "billing": "Billing",
+    "notifications": "Notifications",
+    "emails": "Emails",
+    "email_templates": "Email Templates",
+    "settings": "Settings",
+    "role": {
+      "admin": "Admin",
+      "user": "Workspace"
+    },
+    "admin": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "bugs": "Bugs",
+      "feedbacks": "Feedbacks",
+      "notifications": "Notifications",
+      "reports": "Reports"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "You have no notifications.",
+    "level": {
+      "error": "error",
+      "warning": "warning",
+      "success": "success",
+      "info": "info"
+    },
+    "actions": {
+      "mark_all_read": "Mark all as read",
+      "clear_all": "Clear all"
+    },
+    "badge": {
+      "new": "NEW"
+    }
+  },
+  "leads": {
+    "title": "Leads",
+    "create": "Create lead",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "jobTitle": "Job title",
+      "whatsapp": "WhatsApp",
+      "status": "Status",
+      "createdAt": "Created at",
+      "actions": "Actions"
+    },
+    "status": {
+      "converted": "Converted",
+      "new": "New"
+    },
+    "actions": {
+      "view": "View",
+      "message": "Message",
+      "convert": "Convert"
+    }
+  },
+  "auth": {
+    "common": {
+      "workspace": "DataHarvX workspace",
+      "headline": "Turn focused work into clean growth.",
+      "description": "A calm, secure place for teams to manage lead workflows and customer signals.",
+      "signal_one": "Access",
+      "signal_two": "Sharper outreach"
+    },
+    "sign_in": {
+      "sign_in_with_email": "Sign in with email",
+      "subtitle": "Welcome back. Pick up where your pipeline left off.",
+      "dont_have_account": "Don't have an account?",
+      "forgot_password": "Forgot password?",
+      "buttonCTA": "Sign in",
+      "strip_line": "or continue with",
+      "errors": {
+        "password_required": "Please enter your password"
+      }
+    },
+    "sign_up": {
+      "sign_up_with_email": "Create your account",
+      "subtitle": "Start with a clean workspace and keep every lead moving.",
+      "have_account": "Already have an account?",
+      "buttonCTA": "Sign up",
+      "placeholders": {
+        "first_name": "First name",
+        "last_name": "Last name",
+        "email": "Email address",
+        "password": "Password"
+      },
+      "errors": {
+        "first_name_required": "Please enter your first name",
+        "last_name_required": "Please enter your last name",
+        "email_required": "Please enter your email",
+        "invalid_email_format": "Please enter a valid email address",
+        "password_required": "Please enter your password",
+        "password_too_short": "Password must be at least 8 characters"
+      }
+    },
+    "forgot_password": {
+      "title": "Recover your account",
+      "subtitle": "Enter your email and we will send a reset code.",
+      "buttonCTA": "Send reset code"
+    },
+    "otp": {
+      "title": "Verify your email",
+      "subtitle": "Enter the code from your inbox to finish verification.",
+      "buttonCTA": "Verify OTP",
+      "description": "Enter the 6-digit code sent to your email",
+      "resend": "Resend OTP"
+    },
+    "reset_password": {
+      "title": "Reset password",
+      "subtitle": "Choose a new password to secure your workspace.",
+      "otp": "OTP",
+      "otp_required": "Please enter the OTP",
+      "otp_length": "OTP must be 6 digits",
+      "otp_numeric": "OTP must contain digits only",
+      "otp_placeholder": "Enter OTP",
+      "new_password": "New password",
+      "new_password_placeholder": "Enter new password",
+      "confirm_password": "Confirm password",
+      "confirm_password_placeholder": "Confirm new password",
+      "password_required": "Please enter your password",
+      "password_too_short": "Password must be at least 8 characters",
+      "password_mismatch": "Passwords do not match",
+      "buttonCTA": "Reset password"
+    },
+    "messages": {
+      "errors": {
+        "user_already_verified": "User is already verified",
+        "user_not_found": "User not found",
+        "invalid_email_or_password": "Invalid email or password",
+        "account_deleted": "This account has been deleted",
+        "account_blocked": "This account is blocked",
+        "account_not_verified": "Please verify your account",
+        "no_account_found": "No account found",
+        "incorrect_password": "Incorrect password",
+        "email_already_exists": "Email already exists",
+        "invalid_otp": "Invalid OTP",
+        "weak_password_6": "Password is too weak",
+        "too_many_attempts": "Too many attempts. Please try again later.",
+        "google_signin_failed": "Google sign-in failed",
+        "unexpected_error": "Something went wrong. Please try again."
+      },
+      "success": {
+        "password_reset_email_sent": "Password reset email sent",
+        "account_created": "Account created successfully",
+        "signed_in_successfully": "Signed in successfully",
+        "signed_out_successfully": "Signed out successfully",
+        "password_updated": "Password updated successfully",
+        "google_signin_success": "Signed in with Google",
+        "operation_successful": "Operation successful"
+      }
+    }
+  },
+  "feedback": {
+    "auto_modal": {
+      "title": "We'd Love Your Feedback!",
+      "description": "Help us improve your experience! Share your thoughts and suggestions.",
+      "later": "Maybe Later",
+      "submit": "Submit Feedback"
+    }
+  },
+  "support": {
+    "feedback": {
+      "field": "Your Feedback",
+      "required": "Please enter your feedback",
+      "placeholder": "Share your experience, suggestions, or concerns...",
+      "success": "Feedback submitted successfully!",
+      "fail": "Failed to submit feedback"
+    },
+    "max_length": "Maximum {max} characters"
+  },
+  "commons": {
+    "redirecting_title": "Redirecting",
+    "redirecting_signin": "Redirecting to sign in..."
+  },
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "subtitle": "The page you are looking for does not exist.",
+      "go_back": "Go back",
+      "go_home": "Home"
+    },
+    "500": {
+      "title": "Something went wrong",
+      "description": "Please try again.",
+      "try_again": "Try again"
+    }
+  }
+}

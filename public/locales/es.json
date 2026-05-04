@@ -1,0 +1,198 @@
+{
+  "sidebar": {
+    "brand": "Iris",
+    "dashboard": "Panel",
+    "analysis": "Analisis",
+    "campaigns": "Campanas",
+    "leads": "Clientes potenciales",
+    "folders": "Carpetas",
+    "billing": "Facturacion",
+    "notifications": "Notificaciones",
+    "emails": "Correos",
+    "email_templates": "Plantillas de correo",
+    "settings": "Configuracion",
+    "role": {
+      "admin": "Admin",
+      "user": "Espacio de trabajo"
+    },
+    "admin": {
+      "dashboard": "Panel",
+      "users": "Usuarios",
+      "bugs": "Errores",
+      "feedbacks": "Comentarios",
+      "notifications": "Notificaciones",
+      "reports": "Reportes"
+    }
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "empty": "No tienes notificaciones.",
+    "level": {
+      "error": "error",
+      "warning": "advertencia",
+      "success": "exito",
+      "info": "info"
+    },
+    "actions": {
+      "mark_all_read": "Marcar todo como leido",
+      "clear_all": "Borrar todo"
+    },
+    "badge": {
+      "new": "NUEVO"
+    }
+  },
+  "leads": {
+    "title": "Clientes potenciales",
+    "create": "Crear cliente",
+    "table": {
+      "name": "Nombre",
+      "email": "Correo",
+      "company": "Empresa",
+      "jobTitle": "Cargo",
+      "whatsapp": "WhatsApp",
+      "status": "Estado",
+      "createdAt": "Creado",
+      "actions": "Acciones"
+    },
+    "status": {
+      "converted": "Convertido",
+      "new": "Nuevo"
+    },
+    "actions": {
+      "view": "Ver",
+      "message": "Mensaje",
+      "convert": "Convertir"
+    }
+  },
+  "auth": {
+    "common": {
+      "workspace": "Espacio DataHarvX",
+      "headline": "Convierte el trabajo enfocado en crecimiento claro.",
+      "description": "Un lugar tranquilo y seguro para gestionar leads y senales de clientes.",
+      "signal_one": "Acceso",
+      "signal_two": "Alcance mas preciso"
+    },
+    "sign_in": {
+      "sign_in_with_email": "Iniciar sesion con email",
+      "subtitle": "Bienvenido de nuevo. Continua donde quedo tu pipeline.",
+      "dont_have_account": "No tienes una cuenta?",
+      "forgot_password": "Olvidaste tu contrasena?",
+      "buttonCTA": "Iniciar sesion",
+      "strip_line": "o continuar con",
+      "errors": {
+        "password_required": "Ingresa tu contrasena"
+      }
+    },
+    "sign_up": {
+      "sign_up_with_email": "Crea tu cuenta",
+      "subtitle": "Comienza con un espacio limpio y manten cada lead en movimiento.",
+      "have_account": "Ya tienes una cuenta?",
+      "buttonCTA": "Registrarse",
+      "placeholders": {
+        "first_name": "Nombre",
+        "last_name": "Apellido",
+        "email": "Correo electronico",
+        "password": "Contrasena"
+      },
+      "errors": {
+        "first_name_required": "Ingresa tu nombre",
+        "last_name_required": "Ingresa tu apellido",
+        "email_required": "Ingresa tu correo",
+        "invalid_email_format": "Ingresa un correo valido",
+        "password_required": "Ingresa tu contrasena",
+        "password_too_short": "La contrasena debe tener al menos 8 caracteres"
+      }
+    },
+    "forgot_password": {
+      "title": "Recuperar cuenta",
+      "subtitle": "Ingresa tu correo y te enviaremos un codigo.",
+      "buttonCTA": "Enviar codigo"
+    },
+    "otp": {
+      "title": "Verifica tu correo",
+      "subtitle": "Ingresa el codigo de tu bandeja para finalizar la verificacion.",
+      "buttonCTA": "Verificar OTP",
+      "description": "Ingresa el codigo de 6 digitos enviado a tu correo",
+      "resend": "Reenviar OTP"
+    },
+    "reset_password": {
+      "title": "Restablecer contrasena",
+      "subtitle": "Elige una nueva contrasena para proteger tu espacio.",
+      "otp": "OTP",
+      "otp_required": "Ingresa el OTP",
+      "otp_length": "El OTP debe tener 6 digitos",
+      "otp_numeric": "El OTP solo debe contener digitos",
+      "otp_placeholder": "Ingresa el OTP",
+      "new_password": "Nueva contrasena",
+      "new_password_placeholder": "Ingresa la nueva contrasena",
+      "confirm_password": "Confirmar contrasena",
+      "confirm_password_placeholder": "Confirma la nueva contrasena",
+      "password_required": "Ingresa tu contrasena",
+      "password_too_short": "La contrasena debe tener al menos 8 caracteres",
+      "password_mismatch": "Las contrasenas no coinciden",
+      "buttonCTA": "Restablecer contrasena"
+    },
+    "messages": {
+      "errors": {
+        "user_already_verified": "El usuario ya esta verificado",
+        "user_not_found": "Usuario no encontrado",
+        "invalid_email_or_password": "Correo o contrasena incorrectos",
+        "account_deleted": "Esta cuenta ha sido eliminada",
+        "account_blocked": "Esta cuenta esta bloqueada",
+        "account_not_verified": "Verifica tu cuenta",
+        "no_account_found": "No se encontro ninguna cuenta",
+        "incorrect_password": "Contrasena incorrecta",
+        "email_already_exists": "El correo ya existe",
+        "invalid_otp": "OTP invalido",
+        "weak_password_6": "La contrasena es demasiado debil",
+        "too_many_attempts": "Demasiados intentos. Intentalo mas tarde.",
+        "google_signin_failed": "No se pudo iniciar sesion con Google",
+        "unexpected_error": "Algo salio mal. Intentalo de nuevo."
+      },
+      "success": {
+        "password_reset_email_sent": "Correo de restablecimiento enviado",
+        "account_created": "Cuenta creada correctamente",
+        "signed_in_successfully": "Sesion iniciada correctamente",
+        "signed_out_successfully": "Sesion cerrada correctamente",
+        "password_updated": "Contrasena actualizada correctamente",
+        "google_signin_success": "Sesion iniciada con Google",
+        "operation_successful": "Operacion completada"
+      }
+    }
+  },
+  "feedback": {
+    "auto_modal": {
+      "title": "Nos encantaria recibir tus comentarios",
+      "description": "Ayudanos a mejorar tu experiencia. Comparte tus ideas y sugerencias.",
+      "later": "Quizas despues",
+      "submit": "Enviar comentarios"
+    }
+  },
+  "support": {
+    "feedback": {
+      "field": "Tus comentarios",
+      "required": "Escribe tus comentarios",
+      "placeholder": "Comparte tu experiencia, sugerencias o inquietudes...",
+      "success": "Comentarios enviados correctamente.",
+      "fail": "No se pudieron enviar los comentarios"
+    },
+    "max_length": "Maximo {max} caracteres"
+  },
+  "commons": {
+    "redirecting_title": "Redirigiendo",
+    "redirecting_signin": "Redirigiendo al inicio de sesion..."
+  },
+  "errors": {
+    "404": {
+      "title": "Pagina no encontrada",
+      "subtitle": "La pagina que buscas no existe.",
+      "go_back": "Volver",
+      "go_home": "Inicio"
+    },
+    "500": {
+      "title": "Algo salio mal",
+      "description": "Intentalo de nuevo.",
+      "try_again": "Intentar de nuevo"
+    }
+  }
+}
