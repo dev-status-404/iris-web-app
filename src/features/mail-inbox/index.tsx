@@ -608,7 +608,7 @@ const MessageViewer: React.FC<MessageViewerProps> = ({ accountId, uid, folder })
 
 // ─── No inbox connected empty state ─────────────────────────────────────────
 
-const NoInboxState: React.FC = () => {
+const NoInboxState: React.FC<{ hasAccounts?: boolean }> = ({ hasAccounts = false }) => {
   const router = useRouter();
   return (
     <div
@@ -630,19 +630,20 @@ const NoInboxState: React.FC = () => {
       </div>
       <div>
         <Title level={4} style={{ color: "#fff", marginBottom: 8 }}>
-          No inbox connected
+          {hasAccounts ? "Inbox not enabled" : "No inbox connected"}
         </Title>
-        <Paragraph style={{ color: "rgba(255,255,255,0.5)", maxWidth: 340, margin: "0 auto 20px" }}>
-          Connect an SMTP account with IMAP enabled to start reading your emails here.
-          Head to Settings → SMTP Accounts and enable the Inbox toggle.
+        <Paragraph style={{ color: "rgba(255,255,255,0.5)", maxWidth: 380, margin: "0 auto 20px" }}>
+          {hasAccounts
+            ? "Your SMTP account does not have IMAP enabled. Edit your account in Settings → SMTP, check \"Enable Inbox\", enter your IMAP host (e.g. imap.hostinger.com), port 993, and save."
+            : "Connect an SMTP account with IMAP enabled to start reading your emails here. Head to Settings → SMTP Accounts and enable the Inbox toggle."}
         </Paragraph>
         <Button
           type="primary"
           size="large"
           style={{ background: "linear-gradient(135deg,#6366f1,#818cf8)", border: "none" }}
-          onClick={() => router.push("/settings")}
+          onClick={() => router.push("/settings?tab=smtp")}
         >
-          Go to Settings
+          {hasAccounts ? "Edit SMTP Account" : "Go to Settings"}
         </Button>
       </div>
     </div>
@@ -699,7 +700,7 @@ const MailInboxPage: React.FC = () => {
           overflow: "hidden",
         }}
       >
-        <NoInboxState />
+        <NoInboxState hasAccounts={accounts.length > 0} />
       </div>
     );
   }
