@@ -193,6 +193,15 @@ export const apiEndpoints = {
     delete: (id: string) => `/smtp/accounts/${id}`,
     test: (id: string) => `/smtp/accounts/${id}/test`,
     send: (id: string) => `/smtp/accounts/${id}/send`,
+    // IMAP inbox
+    folders: (id: string) => `/smtp/accounts/${id}/folders`,
+    inbox: (id: string, params?: { folder?: string; page?: number; limit?: number; search?: string }) =>
+      withPagination(`/smtp/accounts/${id}/inbox`, params ?? {}),
+    inboxMessage: (id: string, uid: number | string, folder?: string) =>
+      folder
+        ? `/smtp/accounts/${id}/inbox/${uid}?folder=${encodeURIComponent(folder)}`
+        : `/smtp/accounts/${id}/inbox/${uid}`,
+    inboxFlags: (id: string, uid: number | string) => `/smtp/accounts/${id}/inbox/${uid}/flags`,
   },
 
   /* ================= CAMPAIGNS ================= */
@@ -231,6 +240,94 @@ export const apiEndpoints = {
     changePlan: "/billing/change-plan",
     freeTrial: "/billing/free-trial",
     syncSession: "/billing/sync-session",
+  },
+
+  paymentIntegrations: {
+    base: "/payment-integrations",
+    getOne: (id: string) => `/payment-integrations/${id}`,
+    update: (id: string) => `/payment-integrations/${id}`,
+    delete: (id: string) => `/payment-integrations/${id}`,
+    verify: (id: string) => `/payment-integrations/${id}/verify`,
+  },
+
+  invoices: {
+    base: "/invoices",
+    getOne: (id: string) => `/invoices/${id}`,
+    update: (id: string) => `/invoices/${id}`,
+    delete: (id: string) => `/invoices/${id}`,
+    send: (id: string) => `/invoices/${id}/send`,
+    markPaid: (id: string) => `/invoices/${id}/mark-paid`,
+    void: (id: string) => `/invoices/${id}/void`,
+  },
+
+  telnyx: {
+    calls: "/telnyx/calls",
+    sms: "/telnyx/sms",
+    wallet: "/telnyx/wallet",
+    ledger: (params?: { page?: number; limit?: number }) =>
+      withPagination("/telnyx/ledger", params ?? {}),
+    usage: (params?: { workspace_id?: string }) =>
+      withPagination("/telnyx/usage", params ?? {}),
+    overage: "/telnyx/overage",
+    activatePhone: "/telnyx/activate-phone",
+
+    // Call history
+    callHistory: (params?: {
+      page?: number;
+      limit?: number;
+      direction?: "inbound" | "outbound";
+      status?: string;
+      search?: string;
+      dateFrom?: string;
+      dateTo?: string;
+    }) => withPagination("/telnyx/calls/history", params ?? {}),
+
+    // SMS history
+    smsHistory: (params?: {
+      page?: number;
+      limit?: number;
+      direction?: "inbound" | "outbound";
+      status?: string;
+      search?: string;
+      dateFrom?: string;
+      dateTo?: string;
+      threads?: boolean;
+    }) => withPagination("/telnyx/sms/history", params ?? {}),
+
+    // SMS conversation thread with a specific contact
+    smsConversation: (
+      contact: string,
+      params?: { page?: number; limit?: number }
+    ) =>
+      withPagination(
+        `/telnyx/sms/conversation/${encodeURIComponent(contact)}`,
+        params ?? {}
+      ),
+  },
+
+  /* ================= GOOGLE INTEGRATIONS ================= */
+
+  google: {
+    authUrl: "/google/auth-url",
+    status: "/google/status",
+    disconnect: "/google/disconnect",
+    sheetsAppend: "/google/sheets/append",
+    sheetsRead: "/google/sheets/read",
+    calendarEvents: "/google/calendar/events",
+    calendarEvent: (eventId: string) => `/google/calendar/events/${eventId}`,
+  },
+
+  /* ================= PHONE NUMBERS ================= */
+
+  numbers: {
+    available: (params?: { area_code?: string; country_code?: string }) =>
+      withPagination("/numbers/available", params ?? {}),
+    mine: "/numbers/mine",
+    all: (params?: { status?: string; page?: number; limit?: number }) =>
+      withPagination("/numbers/all", params ?? {}),
+    assign: "/numbers/assign",
+    purchase: "/numbers/purchase",
+    release: (id: string) => `/numbers/${id}`,
   },
 
   /* ================= EMAIL TEMPLATES ================= */

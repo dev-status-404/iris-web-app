@@ -5,6 +5,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/hooks/language/use-language";
 import Providers from "@/providers/react-query";
 import StoreProvider from "@/redux/store-provider";
+import { PostHogProvider } from "@/providers/posthog";
 import "react-quill-new/dist/quill.snow.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,9 @@ export default function RootLayout({
         <LanguageProvider>
           <Providers>
             <StoreProvider>
-              <AntdRegistry>{children}</AntdRegistry>
+              <PostHogProvider>
+                <AntdRegistry>{children}</AntdRegistry>
+              </PostHogProvider>
             </StoreProvider>
           </Providers>
         </LanguageProvider>

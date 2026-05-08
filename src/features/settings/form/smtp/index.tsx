@@ -173,7 +173,20 @@ const SmtpSettingsForm: React.FC = () => {
           }),
         );
       } else {
-        await createAccountMutation.mutateAsync(payload);
+        if (!values.password) {
+          message.error(
+            intl.formatMessage({
+              id: "settings.smtp.passwordRequired",
+              defaultMessage: "SMTP password is required.",
+            }),
+          );
+          return;
+        }
+
+        await createAccountMutation.mutateAsync({
+          ...payload,
+          password: values.password,
+        });
         message.success(
           intl.formatMessage({
             id: "settings.smtp.createSuccess",

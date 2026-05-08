@@ -310,6 +310,24 @@
         "weak_password_6": "La contrasena es demasiado debil",
         "too_many_attempts": "Demasiados intentos. Intentalo mas tarde.",
         "google_signin_failed": "No se pudo iniciar sesion con Google",
+        "subscription_check_required": "Inicia sesion y actualiza el estado de tu suscripcion.",
+        "no_active_subscription": "No se encontro una suscripcion activa. Elige un plan para continuar.",
+        "free_trial_expired": "Tu prueba gratis expiro. Suscribete para continuar.",
+        "cannot_change_free_trial": "La prueba gratis no se puede cambiar aqui. Suscribete primero a un plan de pago.",
+        "cannot_cancel_free_trial": "La prueba gratis no se puede cancelar desde esta pagina.",
+        "already_on_plan": "Ya estas usando este plan.",
+        "plan_not_found": "No se encontro el plan seleccionado.",
+        "plan_not_configured": "Este plan aun no esta configurado completamente para pagos.",
+        "billing_portal_unavailable": "El portal de facturacion aun no esta disponible para esta cuenta.",
+        "checkout_failed": "No se pudo iniciar el pago. Intentalo de nuevo.",
+        "plan_change_failed": "No se pudo cambiar el plan. Intentalo de nuevo.",
+        "subscription_cancel_failed": "No se pudo cancelar la suscripcion. Intentalo de nuevo.",
+        "insufficient_credits": "No tienes creditos suficientes para esta accion.",
+        "invalid_credit_amount": "La cantidad de creditos debe ser mayor que cero.",
+        "campaign_limit_reached": "Tu plan actual alcanzo el limite de campanas.",
+        "smtp_limit_reached": "Tu plan actual alcanzo el limite de dominios SMTP.",
+        "plan_upgrade_required": "Mejora tu plan para continuar.",
+        "payment_integration_failed": "No se pudo completar la integracion de pago.",
         "unexpected_error": "Algo salio mal. Intentalo de nuevo."
       },
       "success": {
@@ -319,6 +337,11 @@
         "signed_out_successfully": "Sesion cerrada correctamente",
         "password_updated": "Contrasena actualizada correctamente",
         "google_signin_success": "Sesion iniciada con Google",
+        "plan_changed": "Plan cambiado correctamente",
+        "subscription_cancelled": "La suscripcion se cancelara al final del periodo de facturacion",
+        "free_trial_started": "Prueba gratis iniciada. Disfruta 14 dias de acceso completo.",
+        "credits_updated": "Creditos actualizados correctamente",
+        "payment_integration_updated": "Integracion de pago actualizada correctamente",
         "operation_successful": "Operacion completada"
       }
     }
@@ -821,6 +844,7 @@
         "reset": "Restablecer"
       },
       "configurationTitle": "ConfigurationTitle",
+      "passwordRequired": "La contrasena SMTP es obligatoria.",
       "field": {
         "label": "Etiqueta",
         "labelPlaceholder": "LabelPlaceholder",

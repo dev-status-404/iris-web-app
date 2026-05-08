@@ -4,7 +4,7 @@ import SettingTabs from "./ui/setting-tab";
 
 const SettingsLayout = () => {
   return (
-    <div className="p-12 rounded-xl ">
+    <div style={{ padding: "32px 40px" }}>
       <SettingTabs />
     </div>
   );

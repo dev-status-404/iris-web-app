@@ -1,5 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState, useCallback } from "react";
+import api from "@/api/axios";
+import { apiEndpoints } from "@/api/end-points";
 
 export type FeedbacksQueryState = {
   page: number;
@@ -57,25 +59,16 @@ export const useFeedbacksList = () => {
   } = useQuery({
     queryKey: ["feedbacks", query],
     queryFn: async () => {
-      const queryParams = new URLSearchParams();
-      queryParams.append('page', query.page.toString());
-      queryParams.append('limit', query.limit.toString());
-      
-      if (query.search) {
-        queryParams.append('search', query.search);
-      }
-      
-      if (query.user_id) {
-        queryParams.append('user_id', query.user_id);
-      }
+      const { data } = await api.get<FeedbackResponse>(
+        apiEndpoints.support.feedback_list({
+          page: query.page,
+          limit: query.limit,
+          search: query.search,
+          user_id: query.user_id,
+        } as any),
+      );
 
-      const response = await fetch(`http://localhost:4000/api/feedback/get?${queryParams}`);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch feedbacks');
-      }
-      
-      return response.json() as Promise<FeedbackResponse>;
+      return data;
     },
     staleTime: 30000, // 30 seconds
   });
@@ -116,19 +109,8 @@ export const useCreateFeedback = () => {
   return useMutation({
     mutationKey: ["support", "feedback", "create"],
     mutationFn: async (input: { feedback: string; user_id?: string }) => {
-      const response = await fetch('http://localhost:4000/api/feedback/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(input),
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to create feedback');
-      }
-      
-      return response.json();
+      const { data } = await api.post(apiEndpoints.support.feedback_create, input);
+      return data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["feedbacks"] });
@@ -151,19 +133,8 @@ export const useUpdateFeedback = () => {
       id: string;
       payload: Partial<FeedbackType>;
     }) => {
-      const response = await fetch(`http://localhost:4000/api/feedback/update/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to update feedback');
-      }
-      
-      return response.json();
+      const { data } = await api.put(apiEndpoints.support.feedback_update(id), payload);
+      return data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["feedbacks"] });
@@ -180,15 +151,8 @@ export const useDeleteFeedback = () => {
   return useMutation({
     mutationKey: ["support", "feedback", "delete"],
     mutationFn: async (id: string) => {
-      const response = await fetch(`http://localhost:4000/api/feedback/delete/${id}`, {
-        method: 'DELETE',
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to delete feedback');
-      }
-      
-      return response.json();
+      const { data } = await api.delete(apiEndpoints.support.feedback_delete(id));
+      return data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["feedbacks"] });

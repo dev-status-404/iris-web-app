@@ -310,6 +310,24 @@
         "weak_password_6": "Password is too weak",
         "too_many_attempts": "Too many attempts. Please try again later.",
         "google_signin_failed": "Google sign-in failed",
+        "subscription_check_required": "Please sign in and refresh your subscription status.",
+        "no_active_subscription": "No active subscription found. Please choose a plan to continue.",
+        "free_trial_expired": "Your free trial has expired. Please subscribe to continue.",
+        "cannot_change_free_trial": "Free trials cannot be changed here. Please subscribe to a paid plan first.",
+        "cannot_cancel_free_trial": "Free trials cannot be cancelled from this page.",
+        "already_on_plan": "You are already on this plan.",
+        "plan_not_found": "The selected plan could not be found.",
+        "plan_not_configured": "This plan is not fully configured for billing yet.",
+        "billing_portal_unavailable": "The billing portal is not available for this account yet.",
+        "checkout_failed": "Failed to start checkout. Please try again.",
+        "plan_change_failed": "Failed to change plan. Please try again.",
+        "subscription_cancel_failed": "Failed to cancel subscription. Please try again.",
+        "insufficient_credits": "You do not have enough credits for this action.",
+        "invalid_credit_amount": "Credit amount must be greater than zero.",
+        "campaign_limit_reached": "Your current plan has reached its campaign limit.",
+        "smtp_limit_reached": "Your current plan has reached its SMTP domain limit.",
+        "plan_upgrade_required": "Please upgrade your plan to continue.",
+        "payment_integration_failed": "Payment integration could not be completed.",
         "unexpected_error": "Something went wrong. Please try again."
       },
       "success": {
@@ -319,6 +337,11 @@
         "signed_out_successfully": "Signed out successfully",
         "password_updated": "Password updated successfully",
         "google_signin_success": "Signed in with Google",
+        "plan_changed": "Plan changed successfully",
+        "subscription_cancelled": "Subscription will be cancelled at the end of the billing period",
+        "free_trial_started": "Free trial started. Enjoy 14 days of full access.",
+        "credits_updated": "Credits updated successfully",
+        "payment_integration_updated": "Payment integration updated successfully",
         "operation_successful": "Operation successful"
       }
     }
@@ -821,6 +844,7 @@
         "reset": "Reset"
       },
       "configurationTitle": "ConfigurationTitle",
+      "passwordRequired": "SMTP password is required.",
       "field": {
         "label": "Label",
         "labelPlaceholder": "LabelPlaceholder",

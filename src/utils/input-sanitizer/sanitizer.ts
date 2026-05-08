@@ -1,6 +1,3 @@
-// Use this in Next.js so SSR works too:
-import DOMPurify from "isomorphic-dompurify";
-
 // JSON-like value types
 type JsonPrimitive = string | number | boolean | null;
 export type JsonValue = JsonPrimitive | JsonObject | JsonArray;
@@ -8,6 +5,14 @@ export interface JsonObject {
   [key: string]: JsonValue;
 }
 export type JsonArray = JsonValue[];
+
+function sanitizeString(value: string): string {
+  return value
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+    .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, "")
+    .replace(/\s(?:href|src)\s*=\s*(['"])\s*javascript:.*?\1/gi, "")
+    .replace(/javascript:/gi, "");
+}
 
 /**
  * Public API – keeps caller's type T but delegates recursion to a non-generic.
@@ -22,7 +27,7 @@ export function sanitizeDeep<T extends JsonValue>(input: T): T {
  */
 function sanitizeDeepValue(value: JsonValue): JsonValue {
   if (typeof value === "string") {
-    return DOMPurify.sanitize(value);
+    return sanitizeString(value);
   }
 
   if (Array.isArray(value)) {
@@ -51,7 +56,7 @@ export const sanitizeFlatStrings = <T extends Record<string, string>>(
 ): { [K in keyof T]: string } => {
   const clean = {} as { [K in keyof T]: string };
   for (const k of Object.keys(input) as Array<keyof T>) {
-    clean[k] = DOMPurify.sanitize(input[k]);
+    clean[k] = sanitizeString(input[k]);
   }
   return clean;
 };

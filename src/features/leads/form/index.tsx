@@ -39,8 +39,21 @@ type Folder = {
 
 type FolderSelectValue =
   | { value: string; label: React.ReactNode }
+  | string
   | null
   | undefined;
+
+const getFolderIdValue = (
+  value: FolderSelectValue,
+  fixedFolderId?: string,
+): string | null => {
+  const folderId =
+    fixedFolderId ??
+    (typeof value === "string" ? value : value?.value) ??
+    null;
+
+  return folderId || null;
+};
 
 const LeadForm: React.FC<Props> = ({
   mode,
@@ -194,7 +207,7 @@ const LeadForm: React.FC<Props> = ({
 
     const payload = {
       ...values,
-      folder_id: folderSelect?.value || null || fixedFolderId,
+      folder_id: getFolderIdValue(folderSelect, fixedFolderId),
       emails: (values.emails || []).filter(Boolean),
       phone_numbers: (values.phone_numbers || []).filter(Boolean),
       scrape_status: true,

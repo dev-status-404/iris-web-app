@@ -14,6 +14,8 @@ import {
 } from "@/api/api_calls/billing";
 import { setSubscription, setPlans } from "@/redux/slices/subscription/subscription-slice";
 import { useAppSelector } from "@/redux/hook";
+import { getErrorMessage, getSuccessMessage } from "@/utils/extractor/auth";
+import { useIntl } from "react-intl";
 
 // ─── Queries ──────────────────────────────────────────────────────────────────
 
@@ -49,6 +51,8 @@ export const useSubscription = () => {
 // ─── Mutations ────────────────────────────────────────────────────────────────
 
 export const useCreateCheckout = () => {
+  const intl = useIntl();
+
   return useMutation({
     mutationFn: createCheckoutSession,
     onSuccess: (res) => {
@@ -58,12 +62,14 @@ export const useCreateCheckout = () => {
       }
     },
     onError: (err: any) => {
-      message.error(err?.response?.data?.message || "Failed to start checkout");
+      message.error(intl.formatMessage({ id: getErrorMessage(err) }));
     },
   });
 };
 
 export const useCreatePortal = () => {
+  const intl = useIntl();
+
   return useMutation({
     mutationFn: createPortalSession,
     onSuccess: (res) => {
@@ -72,7 +78,7 @@ export const useCreatePortal = () => {
       }
     },
     onError: (err: any) => {
-      message.error(err?.response?.data?.message || "Failed to open billing portal");
+      message.error(intl.formatMessage({ id: getErrorMessage(err) }));
     },
   });
 };
@@ -80,16 +86,21 @@ export const useCreatePortal = () => {
 export const useCancelSubscription = () => {
   const queryClient = useQueryClient();
   const dispatch = useDispatch();
+  const intl = useIntl();
 
   return useMutation({
     mutationFn: cancelSubscription,
     onSuccess: (res) => {
-      message.success("Subscription will be cancelled at the end of the billing period");
+      message.success(
+        intl.formatMessage({
+          id: getSuccessMessage("subscription will be cancelled"),
+        }),
+      );
       dispatch(setSubscription(res.data));
       queryClient.invalidateQueries({ queryKey: ["subscription"] });
     },
     onError: (err: any) => {
-      message.error(err?.response?.data?.message || "Failed to cancel subscription");
+      message.error(intl.formatMessage({ id: getErrorMessage(err) }));
     },
   });
 };
@@ -97,17 +108,17 @@ export const useCancelSubscription = () => {
 export const useChangePlan = () => {
   const queryClient = useQueryClient();
   const dispatch = useDispatch();
+  const intl = useIntl();
 
   return useMutation({
     mutationFn: (planName: string) => changePlan(planName),
     onSuccess: (res) => {
-      message.success(res.message || "Plan changed successfully");
+      message.success(intl.formatMessage({ id: getSuccessMessage(res.message) }));
       dispatch(setSubscription(res.data));
       queryClient.invalidateQueries({ queryKey: ["subscription"] });
     },
     onError: (err: any) => {
-      const msg = err?.response?.data?.message || "Failed to change plan";
-      message.error(msg);
+      message.error(intl.formatMessage({ id: getErrorMessage(err) }));
     },
   });
 };
@@ -117,16 +128,19 @@ export const useChangePlan = () => {
 export const useStartFreeTrial = () => {
   const queryClient = useQueryClient();
   const dispatch = useDispatch();
+  const intl = useIntl();
 
   return useMutation({
     mutationFn: startFreeTrial,
     onSuccess: (res) => {
-      message.success("Free trial started! Enjoy 14 days of full access.");
+      message.success(
+        intl.formatMessage({ id: getSuccessMessage("free trial started") }),
+      );
       dispatch(setSubscription(res.data));
       queryClient.invalidateQueries({ queryKey: ["subscription"] });
     },
     onError: (err: any) => {
-      message.error(err?.response?.data?.message || "Failed to start free trial");
+      message.error(intl.formatMessage({ id: getErrorMessage(err) }));
     },
   });
 };

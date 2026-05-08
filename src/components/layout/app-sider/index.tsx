@@ -18,7 +18,10 @@ import {
   EnvelopeIcon,
   RectangleStackIcon,
   PhoneArrowUpRightIcon,
+  ClockIcon,
+  PuzzlePieceIcon,
 } from "@heroicons/react/24/outline";
+import WorkspaceSwitcher from "../workspace-switcher";
 import { useIntl } from "react-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useUserInfo } from "@/helpers/use-user";
@@ -34,10 +37,12 @@ type MenuKey =
   | "folders"
   | "billing"
   | "settings"
-  | "phone_numbers"
+  | "phone_lines"
+  | "call_logs"
   | "notifications"
   | "emails"
   | "email_templates"
+  | "integrations"
   // admin
   | "admin_dashboard"
   | "admin_users"
@@ -66,10 +71,12 @@ const AppSider: React.FC = () => {
     folders: "/folders",
     notifications: "/notifications",
     billing: "/billings",
-    phone_numbers: "/phone-numbers",
+    phone_lines: "/phone_lines",
+    call_logs: "/call_logs",
     settings: "/settings",
     emails: "/emails",
     email_templates: "/email-templates",
+    integrations: "/integrations",
 
     // admin (you can adjust paths if yours differ)
     admin_dashboard: uid ? `/dashboard/a/${uid}` : "/dashboard/a",
@@ -105,9 +112,14 @@ const AppSider: React.FC = () => {
       label: intl.formatMessage({ id: "sidebar.leads" }),
     },
     {
-      key: "phone_numbers",
+      key: "phone_lines",
       icon: <PhoneArrowUpRightIcon className="h-5 w-5" />,
-      label: intl.formatMessage({ id: "sidebar.phone_numbers" }),
+      label: intl.formatMessage({ id: "sidebar.phone_numbers", defaultMessage: "Phone Lines" }),
+    },
+    {
+      key: "call_logs",
+      icon: <ClockIcon className="h-5 w-5" />,
+      label: intl.formatMessage({ id: "sidebar.call_logs", defaultMessage: "Call Logs" }),
     },
     {
       key: "folders",
@@ -139,6 +151,11 @@ const AppSider: React.FC = () => {
         id: "sidebar.email_templates",
         defaultMessage: "Email Templates",
       }),
+    },
+    {
+      key: "integrations",
+      icon: <PuzzlePieceIcon className="h-5 w-5" />,
+      label: intl.formatMessage({ id: "sidebar.integrations", defaultMessage: "Integrations" }),
     },
     {
       key: "settings",
@@ -281,6 +298,11 @@ const AppSider: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Workspace switcher */}
+      <div style={{ padding: "0 12px 4px" }}>
+        <WorkspaceSwitcher />
       </div>
 
       {/* Menu */}
