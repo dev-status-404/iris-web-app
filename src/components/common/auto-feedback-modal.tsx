@@ -56,6 +56,8 @@ const AutoFeedbackModal = () => {
 
   return (
     <Modal
+      transitionName=""
+      maskTransitionName=""
       title={
         <FormattedMessage
           id="feedback.auto_modal.title"

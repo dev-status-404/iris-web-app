@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Celliad";
+  src: url("/assets/fonts/Celliad.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Enable class-based dark mode for Tailwind v4 */
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -101,6 +109,17 @@ body {
   background-color: transparent !important;
 }
 
+/* ── Primary button gradient ─────────────────────────────────────────────── */
+.ant-btn-primary {
+  background: linear-gradient(90deg, #fd746c, #ff9068) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+.ant-btn-primary:hover {
+  opacity: 0.88 !important;
+}
+
 .auth-page-shell {
   min-height: 100vh;
   width: 100%;
@@ -108,6 +127,7 @@ body {
   place-items: center;
   overflow: hidden;
   padding: clamp(20px, 3vw, 40px);
+  font-family: var(--font-red-hat), sans-serif;
   background:
     linear-gradient(135deg, rgba(250, 250, 250, 0.96), rgba(244, 244, 245, 0.92)),
     linear-gradient(90deg, rgba(236, 72, 153, 0.08), transparent 34%, rgba(20, 184, 166, 0.08)),
@@ -173,21 +193,53 @@ body {
   z-index: 1;
 }
 
+.auth-brand-wordmark,
+.auth-card-wordmark {
+  font-family: var(--font-red-hat), sans-serif;
+  background: linear-gradient(90deg, #fd746c, #ff9068);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  display: inline-block;
+}
+
+.auth-brand-wordmark {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.auth-card-wordmark {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
 .auth-brand-copy {
   max-width: 410px;
 }
 
 .auth-kicker {
   margin: 0;
-  color: #db2777;
+  font-family: var(--font-red-hat), sans-serif;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  background: linear-gradient(90deg, #fd746c, #ff9068);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
 .auth-brand-copy .auth-kicker {
-  color: #f9a8d4;
+  background: linear-gradient(90deg, #fd746c, #ff9068);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .auth-brand-copy h1 {
@@ -316,7 +368,9 @@ body {
   border: 0 !important;
   border-radius: 14px !important;
   font-weight: 760 !important;
-  box-shadow: 0 16px 34px rgba(24, 24, 27, 0.2) !important;
+  color: #fff !important;
+  background: linear-gradient(90deg, #fd746c, #ff9068) !important;
+  box-shadow: 0 16px 34px rgba(253, 116, 108, 0.28) !important;
   transition:
     transform 160ms ease,
     box-shadow 160ms ease,

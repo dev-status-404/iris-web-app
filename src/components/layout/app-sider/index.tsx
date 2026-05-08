@@ -239,9 +239,9 @@ const AppSider: React.FC = () => {
       collapsedWidth="0"
       width={200}
       style={{
-        // background: "rgba(255,255,255,0.85)",
+        background: "linear-gradient(to bottom, #000000, #434343)",
         backdropFilter: "blur(10px)",
-        borderRight: "1px solid rgba(15,23,42,0.08)",
+        borderRight: "1px solid rgba(255,255,255,0.06)",
       }}
     >
       {/* Brand */}
@@ -257,17 +257,19 @@ const AppSider: React.FC = () => {
               style={{
                 fontSize: 16,
                 fontWeight: 800,
-                background: "linear-gradient(90deg, #8b5cf6 0%, #a78bfa 55%, #c084fc 100%)",
+                fontFamily: "var(--font-red-hat), sans-serif",
+                background: "linear-gradient(90deg, #fd746c, #ff9068)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
                 color: "transparent",
               }}
             >
-              {intl.formatMessage({ id: "sidebar.brand" })}
+              iriscalls
             </div>
 
             <div style={{ fontSize: 12 }}>
-              {isAdmin
+              {/* {isAdmin
                 ? intl.formatMessage({
                     id: "sidebar.role.admin",
                     defaultMessage: "Admin",
@@ -275,7 +277,7 @@ const AppSider: React.FC = () => {
                 : intl.formatMessage({
                     id: "sidebar.role.user",
                     defaultMessage: "Workspace",
-                  })}
+                  })} */}
             </div>
           </div>
         </div>

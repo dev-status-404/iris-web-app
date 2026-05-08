@@ -104,7 +104,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       sliderTrack: "#f4f4f5",
       sliderTrackHover: "#e4e4e7",
 
-      siderBg: "#ffffff",
+      siderBg: "transparent",
       appBg: "#fafafa",
     };
 
@@ -171,7 +171,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       sliderTrack: "#27272a",
       sliderTrackHover: "#3f3f46",
 
-      siderBg: "#18181b",
+      siderBg: "transparent",
       appBg: "#09090b",
     };
 

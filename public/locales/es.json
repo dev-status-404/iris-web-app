@@ -22,7 +22,8 @@
       "feedbacks": "Comentarios",
       "notifications": "Notificaciones",
       "reports": "Reportes"
-    }
+    },
+    "phone_numbers": "Numeros de telefono"
   },
   "notifications": {
     "title": "Notificaciones",
@@ -52,7 +53,20 @@
       "whatsapp": "WhatsApp",
       "status": "Estado",
       "createdAt": "Creado",
-      "actions": "Acciones"
+      "actions": "Acciones",
+      "phones": "Telefonos",
+      "type": "Tipo",
+      "source_url": "URL de origen",
+      "source_rul": "Origen RUL",
+      "avatar_url": "Avatar",
+      "avatar_rul": "Avatar RUL",
+      "bio": "Bio",
+      "category": "Categoria",
+      "is_verified": "Is Verificado",
+      "is_public": "Is Publico",
+      "follower_count": "Seguidores",
+      "following_count": "Siguiendo",
+      "external_urls": "URLs externas"
     },
     "status": {
       "converted": "Convertido",
@@ -61,12 +75,161 @@
     "actions": {
       "view": "Ver",
       "message": "Mensaje",
-      "convert": "Convertir"
+      "convert": "Convertir",
+      "bulk_import": "Bulk Import",
+      "send_to_folder": "Send To Carpeta",
+      "download": "Descargar",
+      "upload": "Subir",
+      "approve_all": "Aprobar All"
+    },
+    "bulk_upload": {
+      "title": "Importar leads en bloque",
+      "choose_file": "Choose File"
+    },
+    "form": {
+      "type_instagram": "Tipo Instagram",
+      "type_linkedin": "Tipo Linkedin",
+      "type_manual": "Tipo Manual",
+      "folder_placeholder": "Carpeta Marcador",
+      "email_invalid": "Correo Invalid",
+      "email_placeholder": "Correo Marcador",
+      "phone_placeholder": "Telefono Marcador",
+      "first_name": "Primero Nombre",
+      "last_name": "Ultimo Nombre",
+      "folder": "Carpeta",
+      "emails": "Correos",
+      "add_email": "Agregar Correo",
+      "phones": "Telefonos",
+      "add_phone": "Agregar Telefono",
+      "company": "Empresa",
+      "job_title": "Job Titulo",
+      "type": "Tipo",
+      "message": "Mensaje",
+      "is_converted": "Is Convertido"
+    },
+    "page": {
+      "title": "Leads",
+      "subtitle": "Subtitle"
+    },
+    "insights": {
+      "title": "Metricas",
+      "subtitle": "Subtitle"
+    },
+    "instagram_analyzer": {
+      "form": {
+        "folder": {
+          "label": "Seleccionar carpeta",
+          "required": "Selecciona una carpeta",
+          "placeholder": "Elige una carpeta"
+        },
+        "username": {
+          "required": "Ingresa un usuario"
+        },
+        "type": {
+          "label": "Tipo de scraping",
+          "required": "Selecciona un tipo",
+          "followers": "Seguidores",
+          "following": "Siguiendo"
+        },
+        "max_limit": {
+          "label": "Limite maximo",
+          "required": "Ingresa un limite",
+          "range": "El limite debe estar entre 1 y 10,000"
+        },
+        "title": "Configuracion del scraper",
+        "submit": "Iniciar scraping"
+      },
+      "info": "El scraping puede tardar varios minutos segun la cantidad de cuentas.",
+      "results": {
+        "title": "Leads extraidos",
+        "empty": "Envia el formulario para iniciar el scraping. Los resultados apareceran aqui."
+      },
+      "has_contacts": "Has Contacts"
+    },
+    "drawer": {
+      "add_title": "Agregar Titulo",
+      "edit_title": "Editar Titulo"
+    },
+    "send_to_folder": {
+      "success": "Correcto",
+      "failed": "No se pudo completar",
+      "placeholder": "Elige una carpeta",
+      "bulk_button": "Bulk Boton",
+      "title": "Enviar a carpeta",
+      "confirm": "Confirmar",
+      "description": "Descripcion",
+      "bulk_title": "Bulk Titulo",
+      "bulk_description": "Bulk Descripcion"
+    },
+    "confirm": {
+      "delete_one": "Delete One",
+      "delete_selected": "Delete Selected",
+      "approve_all": "Aprobar All"
+    },
+    "upload": {
+      "no_valid_rows": "No Valid Rows",
+      "success": "Correcto",
+      "failed": "No se pudo completar",
+      "unsupported_format": "Unsupported Format",
+      "title": "Importar leads en bloque",
+      "description": "Descripcion",
+      "supported_formats": "Supported Formats",
+      "button": "Boton"
+    },
+    "search": {
+      "placeholder": "Buscar nombre, correo, empresa..."
+    },
+    "widget": {
+      "recent_title": "Recent Titulo",
+      "total": "Total",
+      "scraped_title": "Scraped Titulo"
+    },
+    "empty": "Vacio",
+    "scrape": {
+      "success": "Correcto",
+      "failed": "No se pudo completar"
+    },
+    "approve": {
+      "success": "Correcto",
+      "failed": "No se pudo completar"
+    },
+    "linkedIn_view": {
+      "title": "Detalles de LinkedIn",
+      "sms_number": "Sms Number",
+      "whatsapp_number": "Whatsapp Number",
+      "landline_number": "Landline Number",
+      "instagram_profile_id": "Instagram Perfil Id",
+      "username": "Usuario",
+      "full_name": "Completo Nombre",
+      "followers": "Seguidores",
+      "following": "Siguiendo",
+      "total_posts": "Total Posts"
+    },
+    "instagram_view": {
+      "private": "Privado",
+      "verified": "Verificado",
+      "public": "Publico",
+      "followers": "Seguidores",
+      "following": "Siguiendo",
+      "total_posts": "Total Posts",
+      "reels": "Reels",
+      "profile": "Perfil",
+      "full_name": "Completo Nombre",
+      "username": "Usuario",
+      "instagram_profile_id": "Instagram Perfil Id",
+      "source_visibility": "Source Visibility",
+      "external_url": "External Url",
+      "external_url_linkshimmed": "External Url Linkshimmed",
+      "deep_data": "Deep Data",
+      "highlight_reel_count": "Highlight Reel Count",
+      "fb_biolink_url": "Fb Biolink Url",
+      "fb_biolink_name": "Fb Biolink Nombre",
+      "links": "Enlaces"
     }
   },
   "auth": {
     "common": {
-      "workspace": "Espacio DataHarvX",
+      "workspace": "Espacio iriscalls",
       "headline": "Convierte el trabajo enfocado en crecimiento claro.",
       "description": "Un lugar tranquilo y seguro para gestionar leads y senales de clientes.",
       "signal_one": "Acceso",
@@ -176,23 +339,562 @@
       "success": "Comentarios enviados correctamente.",
       "fail": "No se pudieron enviar los comentarios"
     },
-    "max_length": "Maximo {max} caracteres"
+    "max_length": "Maximo {max} caracteres",
+    "bug": {
+      "success": "Correcto",
+      "fail": "Fail",
+      "required": "Describe el error",
+      "placeholder": "Describe que ocurrio...",
+      "title": "Reportes de errores",
+      "description": "Descripcion",
+      "report_button": "Report Boton",
+      "your_reports": "Your Reports",
+      "no_reports": "No Reports",
+      "modal_title": "Modal Titulo",
+      "field": "Field",
+      "submit": "Enviar"
+    }
   },
   "commons": {
     "redirecting_title": "Redirigiendo",
-    "redirecting_signin": "Redirigiendo al inicio de sesion..."
+    "redirecting_signin": "Redirigiendo al inicio de sesion...",
+    "updated": "Actualizado",
+    "update_failed": "No se pudo actualizar",
+    "close": "Cerrar",
+    "deleted": "Eliminado",
+    "delete_failed": "No se pudo eliminar",
+    "bulk_delete_failed": "No se pudo eliminar en bloque",
+    "view": "Ver",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "actions": "Acciones",
+    "search": "Buscar",
+    "reset": "Restablecer",
+    "delete_selected": "Eliminar seleccionados",
+    "yes": "Si",
+    "no": "No",
+    "cancel": "Cancelar",
+    "view_all": "Ver todo",
+    "pagination_total": "{start}-{end} de {total}",
+    "range_presets": {
+      "last7": "Ultimos 7 dias",
+      "last30": "Ultimos 30 dias",
+      "thisMonth": "Este mes"
+    },
+    "range_placeholder": {
+      "start": "Fecha inicial",
+      "end": "Fecha final"
+    },
+    "saved": "Guardado",
+    "save_failed": "No se pudo guardar",
+    "select_all": "Seleccionar todo",
+    "clear_selection": "Limpiar seleccion",
+    "create": "Crear",
+    "save": "Guardar",
+    "end_of_list": "Fin de la lista",
+    "add": "Agregar",
+    "approve": "Aprobar",
+    "block_failed": "No se pudo bloquear el usuario",
+    "verify_failed": "No se pudo verificar el usuario",
+    "confirm_delete_one": "Eliminar este elemento?",
+    "name": "Nombre",
+    "email": "Correo",
+    "role": "Rol",
+    "verified": "Verificado",
+    "blocked": "Bloqueado",
+    "created": "Creado",
+    "delete_all": "Eliminar todo",
+    "bulk_delete": "Eliminar seleccionados ({count})"
   },
   "errors": {
     "404": {
       "title": "Pagina no encontrada",
       "subtitle": "La pagina que buscas no existe.",
       "go_back": "Volver",
-      "go_home": "Inicio"
+      "go_home": "Inicio",
+      "go_signin": "Ir al inicio de sesion"
     },
     "500": {
       "title": "Algo salio mal",
       "description": "Intentalo de nuevo.",
       "try_again": "Intentar de nuevo"
     }
+  },
+  "campaigns": {
+    "status": {
+      "DRAFT": "Borrador",
+      "SCHEDULED": "Programada",
+      "SENDING": "Enviando",
+      "SENT": "Enviada",
+      "PAUSED": "Pausada",
+      "CANCELLED": "Cancelada"
+    },
+    "card": {
+      "delete_success": "Campana eliminada correctamente.",
+      "delete_error": "No se pudo eliminar la campana.",
+      "recipients": "Destinatarios",
+      "sent": "Enviados",
+      "unique_opens": "Aperturas unicas",
+      "delivery": "Entrega",
+      "open_rate": "Tasa de apertura",
+      "scheduled_at": "Programada {date}",
+      "sent_at": "Enviada {date}",
+      "created_at": "Creado {date}",
+      "view_details": "Ver detalles",
+      "delete_title": "Eliminar esta campana?",
+      "delete_desc": "Esta accion no se puede deshacer."
+    },
+    "details": {
+      "bounce_rate": "Tasa de rebote",
+      "delivery_rate": "Tasa de entrega",
+      "open_rate": "Tasa de apertura",
+      "track_opens": "Rastrear aperturas",
+      "enabled": "Activo",
+      "folder_name": "Nombre de carpeta",
+      "total_leads": "Leads totales",
+      "created_at": "Creado",
+      "lead_name": "Nombre del lead",
+      "email": "Correo",
+      "company": "Empresa",
+      "status": "Estado",
+      "view": "Ver",
+      "performance_title": "Rendimiento",
+      "performance_description": "Revisa entrega, rebotes y aperturas de esta campana.",
+      "target_folders": "Carpetas objetivo",
+      "target_leads": "Leads objetivo",
+      "target_folders_description": "Carpetas incluidas en esta campana.",
+      "target_leads_description": "Leads incluidos en esta campana."
+    },
+    "form": {
+      "error_update": "No se pudo actualizar la campana.",
+      "error_create": "No se pudo crear la campana.",
+      "success_update": "Campana actualizada correctamente.",
+      "success_create": "Campana creada correctamente.",
+      "send_now": "Enviar ahora",
+      "template_applied": "Plantilla \"{name}\" aplicada",
+      "info_alert_title": "Configuracion de campana",
+      "info_alert_description": "Las campanas se pueden guardar como borrador, enviar ahora o programar.",
+      "no_active_smtp": "No hay cuentas SMTP activas",
+      "no_active_smtp_description": "Necesitas al menos una cuenta SMTP activa para enviar campanas.",
+      "setup_smtp": "Configurar SMTP ->",
+      "basic_info": "Informacion basica",
+      "basic_info_description": "Nombra y describe la campana que veran tus destinatarios.",
+      "name": "Nombre de campana",
+      "name_required": "El nombre de campana es obligatorio.",
+      "name_placeholder": "Ej. Alcance de primavera",
+      "subject": "Asunto",
+      "subject_required": "El asunto es obligatorio.",
+      "subject_placeholder": "Asunto del correo",
+      "tracking_id": "ID de seguimiento",
+      "tracking_id_placeholder": "Identificador opcional",
+      "content": "Contenido",
+      "content_description": "Escribe o elige el contenido del correo.",
+      "selected_template": "Plantilla: {name}",
+      "selected": "Seleccionada",
+      "select_template": "Seleccionar plantilla",
+      "content_required": "El contenido de la campana es obligatorio.",
+      "email_config": "Configuracion de correo",
+      "email_config_description": "Selecciona remitente y detalles de respuesta.",
+      "from_email": "Correo remitente",
+      "from_email_required": "El correo remitente es obligatorio.",
+      "from_email_placeholder": "Selecciona correo remitente",
+      "no_active_smtp_settings": "No hay cuentas SMTP activas. Agrega una en Configuracion.",
+      "from_name": "Nombre remitente",
+      "from_name_placeholder": "Tu empresa o nombre de remitente",
+      "reply_to": "Responder a",
+      "reply_to_placeholder": "Correo de respuesta",
+      "campaign_settings": "Configuracion de campana",
+      "campaign_settings_description": "Elige cuando y como se enviara esta campana.",
+      "status": "Estado",
+      "campaign_type": "Tipo de campana",
+      "campaign_type_specific": "Leads especificos",
+      "campaign_type_folder": "Carpeta",
+      "scheduled_at": "Programada para",
+      "schedule_when": "Programar para",
+      "targeting": "Segmentacion",
+      "targeting_description": "Elige la audiencia que recibira esta campana.",
+      "target_leads": "Leads objetivo",
+      "target_leads_required": "Selecciona al menos un lead.",
+      "target_leads_placeholder": "Selecciona leads",
+      "no_email": "Sin correo",
+      "target_folders": "Carpetas objetivo",
+      "target_folders_required": "Selecciona al menos una carpeta.",
+      "target_folders_placeholder": "Selecciona carpetas",
+      "tracking_options": "Opciones de seguimiento",
+      "tracking_description": "Mide la interaccion desde aperturas y clics.",
+      "track_opens": "Rastrear aperturas",
+      "track_clicks": "Rastrear clics",
+      "save_draft": "Guardar borrador",
+      "schedule_campaign": "Programar campana",
+      "select_schedule_time": "Selecciona una hora de programacion.",
+      "confirm_schedule": "Programar campana",
+      "select_date_time": "Selecciona fecha y hora",
+      "select_email_template": "Seleccionar plantilla de correo",
+      "no_templates_found": "No se encontraron plantillas.",
+      "create_template": "Crear plantilla",
+      "use_template_here": "para usarla aqui.",
+      "template_subject": "Asunto",
+      "template_used": "Usada {count}x"
+    },
+    "info": {
+      "not_sent": "No enviada",
+      "title": "Informacion de campana",
+      "campaign_id": "ID de campana",
+      "created": "Creada",
+      "sent": "Enviada"
+    },
+    "insights": {
+      "title": "Metricas de campanas",
+      "total_campaigns": "Campanas totales",
+      "description": "Comprende entrega e interaccion de tus campanas.",
+      "total_recipients": "Destinatarios totales",
+      "emails_sent": "Correos enviados",
+      "opened": "Abiertos",
+      "unique_opens": "Aperturas unicas",
+      "open_rate": "Tasa de apertura",
+      "click_rate": "Tasa de clics",
+      "delivery_rate": "Tasa de entrega",
+      "bounce_rate": "Tasa de rebote"
+    },
+    "table": {
+      "campaign": "Campana",
+      "status": "Estado",
+      "emailsSent": "Correos enviados",
+      "openRate": "Tasa de apertura",
+      "actions": "Acciones"
+    },
+    "dashboard": {
+      "empty": "Aun no hay campanas",
+      "title": "Campanas",
+      "subtitle": "Gestiona tus campanas de correo y mide aperturas y clics.",
+      "new_campaign": "Nueva campana",
+      "total_campaigns": "Campanas totales",
+      "total_recipients": "Destinatarios totales",
+      "emails_sent": "Correos enviados",
+      "delivery_rate": "Tasa de entrega",
+      "search_placeholder": "Buscar campanas...",
+      "filter_by_status": "Filtrar por estado",
+      "clear": "Limpiar",
+      "no_filter_match": "Ninguna campana coincide con tus filtros",
+      "clear_filters_hint": "Limpia los filtros para ver todas las campanas.",
+      "empty_hint": "Crea tu primera campana de correo para empezar a contactar leads.",
+      "create_first": "Crear primera campana"
+    },
+    "view": {
+      "empty": "Campana no encontrada."
+    }
+  },
+  "dashboard": {
+    "charts": {
+      "weekly_leads": "Leads agregados",
+      "campaign_metrics": "Rendimiento de campanas"
+    },
+    "tables": {
+      "recent_campaigns": "Campanas recientes"
+    },
+    "stats": {
+      "subtitles": {
+        "lastDays": "Ultimos {days} dias",
+        "customRange": "Rango personalizado",
+        "markedConverted": "Marcados como convertidos",
+        "convertedOverTotal": "Convertidos sobre leads totales",
+        "averagePerDay": "Promedio de leads creados por dia"
+      },
+      "totalLeads": "Leads totales",
+      "converted": "Convertidos",
+      "conversionRate": "Tasa de conversion",
+      "avgPerDay": "Promedio por dia"
+    },
+    "title": "Panel",
+    "subtitle": "Mide rendimiento y actividad de leads."
+  },
+  "admin": {
+    "bugs": {
+      "modal": {
+        "view": "Detalles del error",
+        "edit": "Editar error"
+      },
+      "confirm": {
+        "delete_one": "Eliminar este error?",
+        "delete_selected": "Eliminar {count} elemento(s) seleccionado(s)?"
+      },
+      "search": {
+        "placeholder": "Buscar texto del error..."
+      },
+      "table": {
+        "bug": "Error",
+        "status": "Estado",
+        "user": "Usuario",
+        "created": "Creado",
+        "updated": "Actualizado"
+      },
+      "title": "Errores",
+      "total": "Total {total}",
+      "empty": "No hay errores"
+    },
+    "panel_title": "Panel de administracion",
+    "panel_subtitle": "Monitorea usuarios, accesos y actividad del sistema.",
+    "kpis": {
+      "total_users": "Usuarios totales",
+      "new_in_range": "Nuevos en el rango: {count}",
+      "avg_per_day": "Prom./dia: {count}",
+      "blocked_users": "Usuarios bloqueados",
+      "feedbacks": "Comentarios",
+      "bugs": "Errores"
+    },
+    "feedbacks": {
+      "modal": {
+        "view": "Detalles del comentario"
+      },
+      "confirm": {
+        "delete_one": "Eliminar este comentario?",
+        "delete_selected": "Eliminar {count} elemento(s) seleccionado(s)?"
+      },
+      "search": {
+        "placeholder": "Buscar comentario..."
+      },
+      "table": {
+        "feedback": "Comentario",
+        "user": "Usuario",
+        "created": "Creado",
+        "updated": "Actualizado"
+      },
+      "title": "Comentarios",
+      "total": "Total {total}",
+      "empty": "No hay comentarios"
+    },
+    "users": {
+      "confirm": {
+        "bulk_delete": "Eliminar usuarios seleccionados?",
+        "bulk_delete_desc": "Esto eliminara {count} usuario(s). Esta accion no se puede deshacer.",
+        "delete_all": "Eliminar todos los usuarios?",
+        "delete_all_desc": "Esto eliminara todos los usuarios que coincidan con los filtros actuales. Esta accion no se puede deshacer."
+      },
+      "bulk_deleted": "{count} usuario(s) eliminado(s)",
+      "all_deleted": "Todos los usuarios eliminados",
+      "search": {
+        "placeholder": "Buscar nombre o correo"
+      },
+      "details": {
+        "title": "Detalles del usuario"
+      },
+      "table": {
+        "user": "Usuario",
+        "role": "Rol",
+        "provider": "Proveedor",
+        "verified": "Verificado",
+        "blocked": "Bloqueado"
+      },
+      "title": "Usuarios",
+      "total": "Total {total}",
+      "empty": "No hay usuarios"
+    },
+    "charts": {
+      "users_created": {
+        "title": "Usuarios creados"
+      }
+    }
+  },
+  "folders": {
+    "table": {
+      "name": "Nombre",
+      "createdAt": "Creado",
+      "empty": "No hay carpetas"
+    },
+    "title": "Carpetas",
+    "search": {
+      "placeholder": "Buscar carpetas..."
+    },
+    "create": "Crear carpeta",
+    "confirm": {
+      "delete_selected": "Eliminar {count} carpeta(s)?"
+    },
+    "fields": {
+      "name": "Nombre"
+    },
+    "errors": {
+      "name_required": "El nombre es obligatorio."
+    },
+    "placeholders": {
+      "name": "Ej. Leads de seguridad"
+    },
+    "edit": "Editar carpeta",
+    "details": {
+      "subtitle": "Ver y gestionar leads dentro de esta carpeta."
+    }
+  },
+  "insights": {
+    "labels": {
+      "today": "hoy"
+    },
+    "cards": {
+      "total_leads": {
+        "title": "Leads totales",
+        "subtitle": {
+          "delta": "Comparado con ayer - {todayLabel}",
+          "all_sources": "Todas las fuentes combinadas"
+        }
+      },
+      "converted": {
+        "title": "Convertidos",
+        "subtitle": {
+          "percent_of_total": "{percent}% del total",
+          "dash": "-"
+        }
+      },
+      "deleted": {
+        "title": "Eliminados",
+        "subtitle": {
+          "percent_of_total": "{percent}% del total",
+          "dash": "-"
+        }
+      },
+      "by_type": {
+        "title": "Por tipo",
+        "subtitle": {
+          "no_breakdown": "Sin desglose por tipo"
+        }
+      }
+    }
+  },
+  "settings": {
+    "errors": {
+      "userIdMissing": "UserIdMissing",
+      "saveFailed": "SaveFailed"
+    },
+    "success": {
+      "saved": "Saved"
+    },
+    "closeAccount": {
+      "confirmTitle": "ConfirmTitle",
+      "confirmText": "ConfirmText",
+      "confirmOk": "ConfirmOk",
+      "confirmCancel": "ConfirmCancel",
+      "success": "Correcto",
+      "title": "Cerrar cuenta",
+      "button": "Boton",
+      "helpText": "HelpText"
+    },
+    "general": {
+      "title": "General"
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "toggle": "Toggle"
+    },
+    "invoices": {
+      "title": "Facturas",
+      "receiveByEmail": "ReceiveByEmail"
+    },
+    "actions": {
+      "save": "Guardar"
+    },
+    "smtp": {
+      "updateSuccess": "UpdateSuccess",
+      "createSuccess": "CreateSuccess",
+      "saveError": "SaveError",
+      "deleteSuccess": "DeleteSuccess",
+      "deleteError": "DeleteError",
+      "testSuccess": "TestSuccess",
+      "testError": "TestError",
+      "table": {
+        "email": "Correo",
+        "host": "Host",
+        "status": "Estado",
+        "verified": "Verificado",
+        "dailyLimit": "DailyLimit",
+        "actions": "Acciones",
+        "edit": "Editar",
+        "test": "Test",
+        "deleteConfirm": "DeleteConfirm",
+        "deleteOk": "DeleteOk",
+        "deleteCancel": "DeleteCancel",
+        "delete": "Delete",
+        "empty": "Vacio"
+      },
+      "title": "Cuentas SMTP",
+      "description": "Descripcion",
+      "actions": {
+        "newAccount": "NewAccount",
+        "update": "Update",
+        "create": "Crear",
+        "reset": "Restablecer"
+      },
+      "configurationTitle": "ConfigurationTitle",
+      "field": {
+        "label": "Etiqueta",
+        "labelPlaceholder": "LabelPlaceholder",
+        "senderName": "SenderName",
+        "senderNamePlaceholder": "SenderNamePlaceholder",
+        "email": "Correo",
+        "username": "Usuario",
+        "usernamePlaceholder": "UsernamePlaceholder",
+        "password": "Contrasena",
+        "passwordPlaceholder": "PasswordPlaceholder",
+        "smtpHost": "SmtpHost",
+        "smtpPort": "SmtpPort",
+        "smtpSecure": "SmtpSecure",
+        "enableInbox": "EnableInbox",
+        "imapHost": "ImapHost",
+        "imapPort": "ImapPort",
+        "imapSecure": "ImapSecure",
+        "warmupEnabled": "WarmupEnabled",
+        "messagesPerDay": "MessagesPerDay",
+        "signature": "Signature",
+        "signaturePlaceholder": "SignaturePlaceholder",
+        "unsubscribeUrl": "UnsubscribeUrl",
+        "active": "Active"
+      },
+      "validation": {
+        "emailRequired": "EmailRequired",
+        "emailInvalid": "EmailInvalid",
+        "usernameRequired": "UsernameRequired",
+        "passwordRequired": "PasswordRequired",
+        "smtpHostRequired": "SmtpHostRequired",
+        "smtpPortRequired": "SmtpPortRequired"
+      },
+      "help": {
+        "passwordUpdate": "PasswordUpdate"
+      },
+      "smtpSettingsTitle": "SmtpSettingsTitle",
+      "sectionImapTitle": "SectionImapTitle",
+      "sectionSettingsTitle": "SectionSettingsTitle",
+      "tableTitle": "TableTitle"
+    },
+    "tabs": {
+      "general": "General",
+      "profile": "Perfil",
+      "password_security": "Contrasena Security",
+      "smtp": "Smtp",
+      "support": "Support"
+    }
+  },
+  "password_and_security": {
+    "confirm": {
+      "title": "Restablecer contrasena?",
+      "description": "Descripcion",
+      "confirmButton": "ConfirmButton",
+      "cancelButton": "CancelButton"
+    },
+    "title": "Contrasena y seguridad",
+    "description": "Descripcion",
+    "resetPassword": "ResetPassword"
+  },
+  "profile": {
+    "update_success": "Update Correcto",
+    "update_error": "Update Error",
+    "title": "Perfil",
+    "avatar": "Avatar",
+    "uploadAvatar": "UploadAvatar",
+    "firstName": "FirstName",
+    "errors": {
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "email": "Correo",
+      "invalidEmail": "InvalidEmail"
+    },
+    "lastName": "LastName",
+    "email": "Correo",
+    "save": "Guardar"
   }
 }

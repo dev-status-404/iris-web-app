@@ -77,6 +77,7 @@ export type Lead = {
   job_title?: string;
   message?: string;
   folder_id?: string;
+  type?: "INSTAGRAM" | "LINKEDIN" | "MANUAL";
   scrape_status?: boolean;
   is_converted?: boolean;
   createdAt?: string | Date;

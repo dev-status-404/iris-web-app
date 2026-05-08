@@ -1,6 +1,6 @@
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/hooks/language/use-language";
 import Providers from "@/providers/react-query";
@@ -16,10 +16,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const redHatDisplay = Red_Hat_Display({
+  variable: "--font-red-hat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata: Metadata = {
-  title: "DataHarvX",
+  title: "iriscalls",
   description:
-    "Welcome to DataHarvX. Get qualified leads and grow your business.",
+    "Welcome to iriscalls. Get qualified leads and grow your business.",
 };
 
 export default function RootLayout({
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased `}
       >
         <LanguageProvider>
           <Providers>

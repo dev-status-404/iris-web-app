@@ -1,10 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { FormattedMessage } from "react-intl";
-import lightLogo from "../../../../public/assets/PNGs/logo.png";
-import darkLogo from "../../../../public/assets/PNGs/logo_dark.png";
 
 type Props = {
   children: React.ReactNode;
@@ -25,22 +22,7 @@ const AuthCard = ({ children, title }: Props) => {
     <div className="auth-frame">
       <aside className="auth-brand-panel" aria-hidden="true">
         <div className="auth-brand-mark">
-          <Image
-            src={lightLogo}
-            alt=""
-            width={126}
-            height={48}
-            className="h-auto w-[126px] object-contain dark:hidden"
-            priority
-          />
-          <Image
-            src={darkLogo}
-            alt=""
-            width={126}
-            height={48}
-            className="hidden h-auto w-[126px] object-contain dark:block"
-            priority
-          />
+          {/* <span className="auth-brand-wordmark">iriscalls</span> */}
         </div>
 
         <div className="auth-brand-copy">
@@ -69,26 +51,11 @@ const AuthCard = ({ children, title }: Props) => {
 
       <main className="auth-card">
         <div className="auth-card-header">
-          <Image
-            src={lightLogo}
-            alt="DataHarvX"
-            width={116}
-            height={44}
-            className="mx-auto h-auto w-[116px] object-contain dark:hidden lg:hidden"
-            priority
-          />
-          <Image
-            src={darkLogo}
-            alt="DataHarvX"
-            width={116}
-            height={44}
-            className="mx-auto hidden h-auto w-[116px] object-contain dark:block lg:hidden"
-            priority
-          />
+          <span className="auth-brand-wordmark !text-7xl lg:hidden">iriscalls</span>
 
           <div className="auth-title-group">
             <p className="auth-kicker lg:hidden">
-              <FormattedMessage id="auth.common.workspace" />
+              {/* <FormattedMessage id="auth.common.workspace" /> */}
             </p>
             <h2>
               <FormattedMessage id={title} />

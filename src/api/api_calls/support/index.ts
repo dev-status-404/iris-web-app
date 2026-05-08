@@ -16,7 +16,7 @@ export async function CreateBug(
 
 export async function UpdateBug(
   id: string,
-  input: UpdateBugPayload,
+  input: Omit<UpdateBugPayload, "bug_id">,
 ): Promise<GenericResponse> {
   const { data } = await api.post(apiEndpoints.support.bug_update, {
     bug_id: id,
